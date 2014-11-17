@@ -9,15 +9,23 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/0
+    - map: /0
       to: /home/vagrant/0
-    - map: ~/1
+    - map: /1
       to: /home/vagrant/1
 
 sites:
     - map: lycee-tcg.local
       to: /home/vagrant/0/lycdb/public
+    - map: localhost
+      to: /home/vagrant/1
 
 variables:
     - key: APP_ENV
       value: local
+    - key: MYSQL_HOST
+      value: localhost
+    - key: MYSQL_USER
+      value: homestead
+    - key: MYSQL_PASS
+      value: secret
